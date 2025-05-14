@@ -21,6 +21,7 @@ steps:
     definition: '3'
     buildVersionToDownload: 'latest'
     targetPath: '$(Pipeline.Workspace)'
+- script: ls $(Pipeline.Workspace)
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
